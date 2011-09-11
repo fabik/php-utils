@@ -1,6 +1,33 @@
 A collection of PHP utilities
 =============================
 
+PHP self-extracting archive creator
+-----------------------------------
+
+This script creates a self-extracting archive that can be extracted just by
+visiting its address in a web browser. It works significantly faster than FTP,
+especially for a plenty of very small files.
+
+Usage: php php-sfx.php [options]
+
+Options:
+    -d  the source directory (default: '.')
+    -o  the output file
+    -e  the extraction directory (default: '.')
+
+
+The following command will create a SFX archive of all files in the current
+working directory. The sfx.php file will extract them also into the current
+working directory.
+
+php php-sfx.php -o sfx.php
+
+The following command will create a SFX archive of all files in the parent
+directory. The sfx.php file will extract them also into the parent directory.
+
+php php-sfx.php -d .. -o sfx.php -e ..
+
+
 License
 -------
 
