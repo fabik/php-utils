@@ -28,6 +28,17 @@ directory. The sfx.php file will extract them also into the parent directory.
 php php-sfx.php -d .. -o sfx.php -e ..
 
 
+PHP self-destructing script
+---------------------------
+
+This script removes all the contents of the current directory including the
+file itself just by visiting its address in a web browser. It works
+significantly faster than FTP, especially for a plenty of very small files.
+
+Note: If you want to adjust the directory to be removed, just modify the $dir
+variable in the script.
+
+
 License
 -------
 
